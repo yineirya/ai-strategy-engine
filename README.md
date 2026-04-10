@@ -1,14 +1,20 @@
-🚀 Enterprise AI Strategy Engine
-Objective: Automate Zero-based design and Value Creation Analysis for legacy business processes.
+# 🚀 Enterprise AI Strategy & Value Engine
 
-🛠️ Strategic Features
-- Intelligent Orchestration: Uses a LangGraph state machine to manage autonomous agents.
-- AI Governance Critic: A dedicated agent that audits designs for PII, Bias, and Hallucination risks before approval.
-- Financial ROI Modeler: Quantifies the Value Hypothesis by calculating labor savings vs. API operational costs.
-- Build vs. Buy Analyst: Evaluates the technical design against enterprise platforms like IBM watsonx.
+An agentic orchestration system designed to automate **Zero-Based Design** and **Financial ROI Modeling** for legacy business processes.
 
-💻 Tech Stack
-- Engine: Python, LangGraph
-- Brain: Groq / Llama-3.3-70b
-- Interface: Streamlit
-- Environment: Python-dotenv (Secure credential management)
+## 🛠️ Tech Stack
+- **Orchestration:** LangGraph (State Machine)
+- **Inference:** Groq / Llama-3.3-70b
+- **Interface:** Streamlit
+- **Logic:** Python (Pydantic, python-dotenv)
+
+## 🛡️ Key Features
+- **Governance Critic:** Autonomous agent audits designs for PII and policy risks.
+- **Value Modeler:** Quantifies ROI based on monthly transaction volume and labor savings.
+- **Build vs. Buy Analyst:** Recommends enterprise platforms (e.g., **IBM watsonx**) vs. custom builds.
+
+## 📊 Quick Start
+1. Clone the repo: `git clone https://github.com/yineirya/ai-strategy-engine.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Add your `GROQ_API_KEY` to a `.env` file.
+4. Run: `./venv/bin/python3 -m streamlit run app.py`
