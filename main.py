@@ -5,7 +5,6 @@ from langgraph.graph import StateGraph, END
 
 from agents import llm, governance_agent, analyst_agent, ProcessDesign, ProcessStep
 from finance import ValueModeler
-from agents import ProcessDesign
 
 load_dotenv()
 
@@ -100,15 +99,11 @@ workflow.add_conditional_edges(
         "rework": "architect", # Loop back to fix design
 	"value_analysis": "value_engine"    }
 )
-# 1. Add the node
 workflow.add_node("build_buy_analyst", build_buy_node)
 
-# 2. Change the final edge
-# Old: workflow.add_edge("value_engine", END)
 workflow.add_edge("value_engine", "build_buy_analyst") # New path
 workflow.add_edge("build_buy_analyst", END)           # Final stop
 
-workflow.add_edge("value_engine", END)
 app = workflow.compile()
 
 if __name__ == "__main__":
